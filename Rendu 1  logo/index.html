@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Logo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="./components/logoComponent.js"></script>
+    <link rel="stylesheet" href="./components/logoComponent.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: rgb(246, 245, 245);
+            background-color: #007bff;
+            padding: 50px;
+            text-transform: uppercase;
+            animation: colorChange 10s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="title">Logo Generator</header>
+    <logo-generator
+        text=""
+        animation="Aucun"
+        color="gray"
+        font="Arial"
+        size="100"
+        width="800"
+        height="800"
+    ></logo-generator>
+</body>
+</html>

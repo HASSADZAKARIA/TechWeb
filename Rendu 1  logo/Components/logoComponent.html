@@ -1,0 +1,88 @@
+<div id="mainContainer">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div id="logoContainer">
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="triangle triangle1"></div>
+        <div class="triangle triangle2"></div>
+        <span id="logo">Default</span>
+    </div>
+    <div id="controls" class="controls">
+        <div class="control-group">
+            <label for="logoText">Texte du logo :</label>
+            <input type="text" id="logoText" class="styled-input" placeholder="Entrez le texte" required>
+        </div>
+
+        <div class="control-group">
+            <label for="logoColor">Couleur :</label>
+            <input type="color" id="logoColor" class="styled-input" value="#808080">
+        </div>
+
+        <div class="control-group">
+            <label for="logoFont">Police :</label>
+            <select id="logoFont" class="styled-select">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Impact">Impact</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Brush Script MT">Brush Script MT</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="logoSize">Taille :</label>
+            <input type="range" id="logoSize" class="styled-input" min="50" max="200" value="100">
+        </div>
+
+        <div class="control-group">
+            <label for="logoAnimation">Effet d'animation :</label>
+            <select id="logoAnimation" class="styled-select">
+                <option value="">Aucun</option>
+                <option value="flip-horizontal-bottom">Flip Horizontal Bottom</option>
+                <option value="rotate-center">Rotation Infinie</option>
+                <option value="pulse">Pulse</option>
+                <option value="shadow-pop-tr">Shadow Pop</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="backgroundImage">URL de l'image de fond :</label>
+            <input type="text" id="backgroundImage" class="styled-input" placeholder="Entrez l'URL de l'image">
+        </div>
+
+        <div class="control-group">
+            <label for="backgroundTextureSelect">Background Texture :</label>
+            <select name="backgroundTextureSelect" id="backgroundTextureSelect" class="styled-select">
+                <option value="">None</option>
+                <option value="https://media2.giphy.com/media/l41YcgNSPj6Wy1KyQ/giphy.gif">Wave Hexagon</option>
+                <option value="https://media4.giphy.com/media/3oEduXpUkXpRgAxfAk/giphy.gif">Colorful Geometry</option>
+                <option value="https://media.giphy.com/media/gNke2UrUTopOg/giphy.gif">Christmas</option>
+                <option value="https://media.giphy.com/media/7Bgpw7PwdxoDC/giphy.gif">Snow</option>
+                <option value="https://media.giphy.com/media/13mwsrXEUtSyZi/giphy.gif">Flames</option>
+                <option value="https://media1.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif">Geometric Eye</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="logoWidth">Largeur du carré :</label>
+            <input type="number" id="logoWidth" class="styled-input" value="200">
+        </div>
+
+        <div class="control-group">
+            <label for="logoHeight">Hauteur du carré :</label>
+            <input type="number" id="logoHeight" class="styled-input" value="200">
+        </div>
+
+        <div class="control-group">
+            <button id="applyButton" class="styled-button">Appliquer</button>
+            <button id="downloadButton" class="styled-button">Télécharger le logo</button>
+            <button id="generateCodeButton" class="styled-button">Générer Code</button>
+        </div>
+    </div>
+</div>

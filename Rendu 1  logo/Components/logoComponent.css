@@ -1,0 +1,343 @@
+@keyframes colorChange {
+  0% { background-color: #007bff; }
+  25% { background-color: #ff5733; }
+  50% { background-color: #33ff57; }
+  75% { background-color: #3357ff; }
+  100% { background-color: #007bff; }
+}
+
+header.title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: rgb(246, 245, 245);
+  background-color: #007bff;
+  padding: 50px;
+  text-transform: uppercase;
+  animation: colorChange 10s infinite;
+}
+
+* {
+  font-size: 20px;
+}
+
+#mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  height: 100vh; /* Assurez-vous que le conteneur prend toute la hauteur de la fenêtre */
+}
+
+#logoContainer {
+  display: inline-block;
+  border: 2px solid black;
+  width: 200px; /* Taille fixe du carré */
+  height: 200px; /* Taille fixe du carré */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Empêche le texte de dépasser */
+  background-size: cover, contain; /* Ajuste les images de fond */
+  background-position: center, center; /* Centre les images de fond */
+  background-repeat: no-repeat, no-repeat; /* Empêche la répétition des images de fond */
+  margin: 10px;
+  z-index: 1; /* Assurez-vous que le carré du logo est au-dessus des cercles */
+  position: relative; /* Ajouté pour permettre un positionnement relatif du texte */
+}
+
+/* pout title je veut que le background soit bleu et que le texte soit noir */
+title {
+  text-align: center;
+  color: black;
+  background-color: blue;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  display: inline-block;
+  color: var(--logo-color, black);
+  font-family: var(--logo-font, Arial);
+  transition: transform 0.5s;
+  white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+  overflow: hidden; /* Empêche le texte de dépasser */
+  text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse */
+  max-width: 100%; /* Empêche le texte de dépasser */
+  max-height: 100%; /* Empêche le texte de dépasser */
+  position: relative; /* Permet de positionner le texte à l'intérieur du conteneur */
+}
+
+.controls {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 300px;
+  flex: 1;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.styled-input,
+.styled-select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.styled-input:focus,
+.styled-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.styled-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.styled-button:hover {
+  background-color: #0056b3;
+}
+
+/* Cercles décoratifs */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.2);
+  animation: float 6s ease-in-out infinite;
+  z-index: 0; /* Assurez-vous que les cercles sont derrière le carré du logo */
+}
+
+.circle1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 10%;
+}
+
+.circle2 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 80%;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  top: 80%;
+  left: 30%;
+}
+
+.circle4 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 70%;
+}
+
+/* Ajout des étoiles et des triangles */
+.star, .triangle {
+  position: absolute;
+  z-index: 1;
+}
+
+/* change moi les emplacements des etoiles et des triangles pour que sa soit jamais a l'interieur du carre */
+
+.star {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgba(255, 215, 0, 0.8);
+}
+
+.star:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid rgba(255, 215, 0, 0.8);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid rgba(255, 69, 0, 0.8);
+}
+
+.triangle1 {
+  top: 20%;
+  left: 20%;
+}
+
+.triangle2 {
+  top: 60%;
+  left: 70%;
+}
+
+.star1 {
+  top: 40%;
+  left: 70%;
+}
+
+.star2 {
+  top: 70%;
+  left: 20%;
+}
+
+/* Animation des cercles */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+/* Media Queries pour rendre le design réactif */
+@media (max-width: 768px) {
+  #mainContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #logoContainer {
+      margin-bottom: 20px;
+  }
+}
+
+/* Annimation */
+
+.rotate-center {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.shadow-pop-tr {
+  -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+      transform: translateX(-8px) translateY(8px);
+  }
+}
+
+@keyframes shadow-pop-tr {
+  0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+      transform: translateX(-8px) translateY(8px);
+  }
+}
+
+.flip-horizontal-bottom {
+  -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+  animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+  }
+  100% {
+      -webkit-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flip-horizontal-bottom {
+  0% {
+      -webkit-transform: rotateX(0);
+      transform: rotateX(0);
+  }
+  100% {
+      -webkit-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+  }
+}
