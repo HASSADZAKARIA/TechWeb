@@ -1,0 +1,122 @@
+/* Styles pour un poste radio vintage */
+.audio-player-container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    background-color: #d2b48c; /* Couleur beige pour un look vintage */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border: 5px solid #8b4513; /* Bordure marron pour un effet bois */
+    font-family: 'Courier New', Courier, monospace; /* Police rétro */
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4b2e83; /* Couleur pour un look vintage */
+    text-shadow: 2px 2px #8b4513; /* Ombre pour un effet de profondeur */
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid #8b4513; /* Bordure marron pour un effet bois */
+    border-radius: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button img {
+    width: 40px; /* Taille des icônes augmentée pour un look vintage */
+    height: 40px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background: #8b4513; /* Couleur marron pour un effet bois */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4b2e83; /* Couleur pour un look vintage */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4b2e83; /* Couleur pour un look vintage */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-top: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #d2b48c; /* Couleur beige pour un look vintage */
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4b2e83; /* Couleur pour un look vintage */
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4b2e83; /* Couleur pour un look vintage */
+    border-radius: 5px;
+}
+
+#visualizer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #000;
+}
